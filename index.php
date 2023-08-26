@@ -2,14 +2,18 @@
 require("admin/function/conn.php");
 require('admin/fetcher/about.php');
 require('admin/fetcher/experience.php');
+require('admin/fetcher/education.php');
+
+
 
 $connect = new Connection();
 $aboutfetcher = new DataFetcher($connect);
 $experiencefetcher = new DataFetcherExp($connect);
-
+$educationfetcher=new DataFetcherEdu($connect);
 
 $dataAbout = $aboutfetcher->getAllAboutData(); 
 $dataExperience = $experiencefetcher->getAllExperienceData();
+$dataEducation=$educationfetcher->getAllEducationData();
 ?>
 <!DOCTYPE html>
 <html lang="en">

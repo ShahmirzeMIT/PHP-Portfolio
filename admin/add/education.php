@@ -1,3 +1,17 @@
+<?php
+require("../function/education.php");
+$add=new Add();
+$text="";
+if(isset($_POST['submit'])){
+	$result=$add->add($_POST['head'],$_POST['date'],$_POST['name'],$_POST['text']);
+	if($result==1){
+		header('Location: ../education.php');
+	}
+	elseif($result==10){
+		$text="Bütün Fieldleri Doldurun";
+	}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

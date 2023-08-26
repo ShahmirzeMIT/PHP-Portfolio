@@ -2,9 +2,9 @@
 require("function/conn.php");
 require('fetcher/experience.php');
 $connect=new Connection();
-$fetcher=new DataFetcher($connect);
+$fetcher=new DataFetcherExp($connect);
 
-$data=$fetcher->getAllData();
+$data=$fetcher->getAllExperienceData();
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -4,7 +4,7 @@ require('fetcher/about.php');
 $connect=new Connection();
 $fetcher=new DataFetcher($connect);
 
-$data=$fetcher->getAllData();
+$data=$fetcher->getAllAboutData();
 ?>
 <!DOCTYPE html>
 <html lang="en">

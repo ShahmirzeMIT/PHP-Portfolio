@@ -1,13 +1,13 @@
 <?php
-class DataFetcher {
+class DataFetcherExp {
 	private $connection;
  
 	public function __construct($connection) {
 	    $this->connection = $connection;
 	}
  
-	public function getAllAboutData() {
-	    $query = "SELECT * FROM `about`";
+	public function getAllExperienceData() {
+	    $query = "SELECT * FROM `experience`";
 	    $result = $this->connection->conn->query($query);
 	    
 	    $data = array();

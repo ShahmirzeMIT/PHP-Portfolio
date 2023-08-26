@@ -1,15 +1,6 @@
-<?php
-require("admin/function/conn.php");
-require('admin/fetcher/about.php');
-$connect=new Connection();
-$fetcher=new DataFetcher($connect);
-
-$data=$fetcher->getAllData();
-?>
-
 <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
         <div class="my-auto">
-          <?php foreach ($data as $row) {?>
+          <?php foreach ($dataAbout as $row) {?>
             <h1 class="mb-0">
             <span class="text-primary"><?=$row['name']?></span>
           </h1>

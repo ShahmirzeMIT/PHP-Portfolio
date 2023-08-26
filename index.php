@@ -1,3 +1,16 @@
+<?php
+require("admin/function/conn.php");
+require('admin/fetcher/about.php');
+require('admin/fetcher/experience.php');
+
+$connect = new Connection();
+$aboutfetcher = new DataFetcher($connect);
+$experiencefetcher = new DataFetcherExp($connect);
+
+
+$dataAbout = $aboutfetcher->getAllAboutData(); 
+$dataExperience = $experiencefetcher->getAllExperienceData();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,6 +76,7 @@
 
     <div class="container-fluid p-0">
       <?php
+      
         include("about.php");
         include("experience.php");
         include("education.php");

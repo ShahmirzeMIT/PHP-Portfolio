@@ -1,3 +1,18 @@
+<?php
+require("../function/experience.php");
+$add=new Add();
+$text="";
+if(isset($_POST['submit'])){
+	$result=$add->add($_POST['head'],$_POST['date'],$_POST['name'],$_POST['text']);
+	if($result==1){
+		header('Location: ../experience.php');
+	}
+	elseif($result==10){
+		$text="Bütün Fieldleri Doldurun";
+	}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +31,7 @@
 	</div>
 	<div class="mb-3">
 		<label for="exampleFormControlInput1" class="form-label">Date</label>
-		<input type="text" name="Date" class="form-control" id="exampleFormControlInput1" placeholder="">
+		<input type="text" name="date" class="form-control" id="exampleFormControlInput1" placeholder="">
 	</div>
 	<div class="mb-3">
 		<label for="exampleFormControlInput1" class="form-label">Name</label>

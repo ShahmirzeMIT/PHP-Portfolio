@@ -1,3 +1,17 @@
+<?php
+require("../function/aboutFunction.php");
+$add=new Add();
+$text="";
+if(isset($_POST['submit'])){
+	$result=$add->add($_POST['name'],$_POST['street'],$_POST['phone'],$_POST['email'],$_POST['text']);
+	if($result==1){
+		header('Location: ../about.php');
+	}
+	elseif($result==10){
+		$text="Bütün Fieldleri Doldurun";
+	}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +48,7 @@
 		<button type="submit" name="submit" class="btn btn-primary">Button</button>
 		<button  class="btn btn-danger"><a href="../about.php" class="text-white text-decoration-none">Go Previous</a></button>
 	</div>
+	<h3 style="color:red;text-align:center"><?=$text?></h3>
 
 	</form>
 </div>

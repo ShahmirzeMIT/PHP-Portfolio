@@ -1,12 +1,22 @@
+<?php
+require("admin/function/conn.php");
+require('admin/fetcher/about.php');
+$connect=new Connection();
+$fetcher=new DataFetcher($connect);
+
+$data=$fetcher->getAllData();
+?>
+
 <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
         <div class="my-auto">
-          <h1 class="mb-0">Clarence
-            <span class="text-primary">Taylor</span>
+          <?php foreach ($data as $row) {?>
+            <h1 class="mb-0">
+            <span class="text-primary"><?=$row['name']?></span>
           </h1>
-          <div class="subheading mb-5">3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
-            <a href="mailto:name@email.com">name@email.com</a>
+          <div class="subheading mb-5"><?=$row['street']?>, <?=$row['phone']?> .
+            <a href="mailto:name@email.com"><?=$row['email']?></a>
           </div>
-          <p class="mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+          <p class="mb-5"><?=$row['text']?></p>
           <ul class="list-inline list-social-icons mb-0">
             <li class="list-inline-item">
               <a href="#">
@@ -41,5 +51,7 @@
               </a>
             </li>
           </ul>
+         <?php }?>
+         
         </div>
       </section>

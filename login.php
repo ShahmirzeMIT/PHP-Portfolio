@@ -39,6 +39,7 @@ if(isset($_POST['submit'])){
 			</div>
 			<div class="mb-3 text-center">
 				<button type="submit" name="submit" class="btn btn-primary">Primary</button>
+				<button  class="btn btn-danger"><a href="index.php" class="text-white text-decoration-none">Go Previous</a></button>
 			</div>
 			<h3 style="color:red;text-align:center"><?=$text?></h3>
 		</form>

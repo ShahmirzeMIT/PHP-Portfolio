@@ -4,16 +4,20 @@ require('admin/fetcher/about.php');
 require('admin/fetcher/experience.php');
 require('admin/fetcher/education.php');
 
+require('admin/fetcher/interest.php');
+
 
 
 $connect = new Connection();
 $aboutfetcher = new DataFetcher($connect);
 $experiencefetcher = new DataFetcherExp($connect);
 $educationfetcher=new DataFetcherEdu($connect);
+$Interestfetcher=new DataFetcherInterest($connect);
 
 $dataAbout = $aboutfetcher->getAllAboutData(); 
 $dataExperience = $experiencefetcher->getAllExperienceData();
 $dataEducation=$educationfetcher->getAllEducationData();
+$dataInterest=$Interestfetcher->getAllInterestData();
 ?>
 <!DOCTYPE html>
 <html lang="en">

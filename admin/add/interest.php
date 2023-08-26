@@ -1,3 +1,18 @@
+<?php
+require("../function/interest.php");
+$add=new Add();
+$text="";
+if(isset($_POST['submit'])){
+	$result=$add->add($_POST['firstText'],$_POST['secondText']);
+	if($result==1){
+		header('Location: ../interest.php');
+	}
+	elseif($result==10){
+		$text="Bütün Fieldleri Doldurun";
+	}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

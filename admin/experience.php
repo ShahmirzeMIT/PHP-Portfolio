@@ -39,7 +39,7 @@ $data=$fetcher->getAllExperienceData();
 			<td><?=$row['date']?></td>
 			<td><?=$row['name']?></td>
 			<td><?=$row['text']?></td>
-			<td><a href="#"><i class="fa-solid fa-pen-to-square text-success"></i></a></td>
+			<td><a href="update/experience.php?id=<?=$row['id']?>"><i class="fa-solid fa-pen-to-square text-success"></i></a></td>
 		</tr>
 	<?php } ?>
 

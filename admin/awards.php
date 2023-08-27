@@ -33,7 +33,7 @@ $data=$fetcher->getAllAwardsData();
 		<?php foreach ($data as $row) {?>
 		<th scope="row"><?=$row['id']?></th>
 		<td><?=$row['text']?></td>
-		<td><a href="#"><i class="fa-solid fa-pen-to-square text-success"></i></a></td>
+		<td><a href="update/awards.php?id=<?=$row['id']?>"><i class="fa-solid fa-pen-to-square text-success"></i></a></td>
 		<?php } ?>
 		
 	</tr>

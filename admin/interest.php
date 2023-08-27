@@ -36,7 +36,7 @@ $data=$fetcher->getAllInterestData();
 		  	<th scope="row"><?=$row['id']?></th>
 		  	<td><?=$row['firstText']?></td>
 		  	<td><?=$row['secondText']?></td>
-		  	<td><a href="#"><i class="fa-solid fa-pen-to-square text-success"></i></a></td>
+		  	<td><a href="update/interest.php?id=<?=$row['id']?>"><i class="fa-solid fa-pen-to-square text-success"></i></a></td>
 		</tr>
 		<?php } ?>
 		

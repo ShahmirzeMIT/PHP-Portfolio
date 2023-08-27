@@ -28,7 +28,7 @@ $data = $show->show($id);
 <body>
 <div class="wd-50">
     <form action="" method="post">
-        <?php 
+        <?php  
         foreach ($data as $row) {
         ?>
         <div class="mb-3">

@@ -1,4 +1,11 @@
+<?php
+require("function/conn.php");
+require('fetcher/awards.php');
+$connect=new Connection();
+$fetcher=new DataFetcherAwards($connect);
 
+$data=$fetcher->getAllAwardsData();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +30,12 @@
 	</thead>
 	<tbody>
 	<tr>
-		<th scope="row">1</th>
-		<td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, excepturi. Pariatur tempora harum id repellendus impedit sed consequatur quae doloribus eius voluptas esse odit et, cum temporibus officiis. Omnis tempora, eos sed quasi nisi inventore itaque debitis consectetur aliquam illo repellat optio asperiores officiis rem labore! Ipsum libero magni quisquam. Qui facere repellat accusantium consectetur ut, hic ex, corporis, commodi voluptatibus quae quasi a consequuntur. Totam, accusantium. Soluta maxime obcaecati mollitia hic iure. Porro, explicabo veritatis ut voluptatem optio fugit soluta laboriosam ab a nobis cupiditate unde dolorum, obcaecati omnis consequuntur nihil adipisci ullam dolores voluptates delectus minus. Dolor, dolore.</td>
+		<?php foreach ($data as $row) {?>
+		<th scope="row"><?=$row['id']?></th>
+		<td><?=$row['text']?></td>
 		<td><a href="#"><i class="fa-solid fa-pen-to-square text-success"></i></a></td>
+		<?php } ?>
+		
 	</tr>
 	<tr>
 

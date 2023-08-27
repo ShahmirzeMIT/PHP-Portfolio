@@ -3,8 +3,9 @@ require("admin/function/conn.php");
 require('admin/fetcher/about.php');
 require('admin/fetcher/experience.php');
 require('admin/fetcher/education.php');
-
 require('admin/fetcher/interest.php');
+require('admin/fetcher/awards.php');
+
 
 
 
@@ -13,11 +14,13 @@ $aboutfetcher = new DataFetcher($connect);
 $experiencefetcher = new DataFetcherExp($connect);
 $educationfetcher=new DataFetcherEdu($connect);
 $Interestfetcher=new DataFetcherInterest($connect);
+$Awardsfetcher=new DataFetcherAwards($connect);
 
 $dataAbout = $aboutfetcher->getAllAboutData(); 
 $dataExperience = $experiencefetcher->getAllExperienceData();
 $dataEducation=$educationfetcher->getAllEducationData();
 $dataInterest=$Interestfetcher->getAllInterestData();
+$dataAwards=$Awardsfetcher->getAllAwardsData();
 ?>
 <!DOCTYPE html>
 <html lang="en">

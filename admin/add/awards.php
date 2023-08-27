@@ -1,3 +1,17 @@
+<?php
+require("../function/awards.php");
+$add=new Add();
+$text="";
+if(isset($_POST['submit'])){
+	$result=$add->add($_POST['text']);
+	if($result==1){
+		header('Location: ../awards.php');
+	}
+	elseif($result==10){
+		$text="Bütün Fieldleri Doldurun";
+	}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

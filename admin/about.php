@@ -42,7 +42,7 @@ $data=$fetcher->getAllAboutData();
 			   <td><?=$row['phone']?></td>
 			   <td><?=$row['email']?></td>
 			   <td><?=$row['text']?></td>
-			   <td><a href="#"><i class="fa-solid fa-pen-to-square text-success"></i></a></td>
+			   <td><a href="update/about.php?id=<?=$row['id']?>"><i class="fa-solid fa-pen-to-square text-success"></i></a></td>
 			</tr>
 		<?php }?>
 	

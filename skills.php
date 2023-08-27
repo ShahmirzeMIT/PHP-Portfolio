@@ -43,16 +43,20 @@
           <ul class="fa-ul mb-0">
             <li>
               <i class="fa-li fa fa-check"></i>
-              Mobile-First, Responsive Design</li>
+              Mobile-First, Responsive Design
+            </li>
             <li>
               <i class="fa-li fa fa-check"></i>
-              Cross Browser Testing &amp; Debugging</li>
+              Cross Browser Testing &amp; Debugging
+            </li>
             <li>
               <i class="fa-li fa fa-check"></i>
-              Cross Functional Teams</li>
+              Cross Functional Teams
+            </li>
             <li>
               <i class="fa-li fa fa-check"></i>
-              Agile Development &amp; Scrum</li>
+              Agile Development &amp; Scrum
+            </li>
           </ul>
         </div>
       </section>
